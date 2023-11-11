@@ -59,7 +59,7 @@ const Students = () => {
           <p className="w-2/12 flex justify-between">
             <button
               onClick={() => handleUpdate()}
-              className="px-4 rounded-sm py-1 text-white bg-danger_yellow"
+              className="px-6 rounded-sm py-1 text-white bg-danger_yellow"
             >
               Update
             </button>
