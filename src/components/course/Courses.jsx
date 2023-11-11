@@ -3,6 +3,13 @@ import { courses } from "../../data";
 import { Link } from "react-router-dom";
 
 const Courses = () => {
+  const handleUpdate = () => {
+    console.log("update button clicked");
+  };
+
+  const handleDelete = () => {
+    console.log("delete button clicked");
+  };
   return (
     <div className="mx-1">
       <div className="flex justify-end">
@@ -28,7 +35,7 @@ const Courses = () => {
 
       {courses.map((course, index) => (
         <div
-          key={course.id}
+          key={course.id + course.title}
           className={`flex justify-evenly py-2 my-2 mx-1 items-center ${
             index % 2 === 0 ? "bg-table_color_alternate" : "bg-white"
           }`}
@@ -39,10 +46,16 @@ const Courses = () => {
           <p className="text-center w-1/12">{course.credit_hours}</p>
           <p className="text-center w-1/12"> {course.enrolled_students} </p>
           <p className="w-2/12 flex justify-between">
-            <button className="px-5 rounded-sm py-1 text-white bg-danger_yellow">
+            <button
+              onClick={() => handleUpdate()}
+              className="px-5 rounded-sm py-1 text-white bg-danger_yellow"
+            >
               Update
             </button>
-            <button className="px-4  rounded-sm py-1 text-white bg-danger_red">
+            <button
+              onClick={() => handleDelete()}
+              className="px-4  rounded-sm py-1 text-white bg-danger_red"
+            >
               Delete
             </button>
           </p>

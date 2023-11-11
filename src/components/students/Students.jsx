@@ -1,8 +1,14 @@
 import React from "react";
-import { students } from "../data";
+import { students } from "../../data";
 import { Link } from "react-router-dom";
 
 const Students = () => {
+  const handleUpdate = () => {
+    console.log("update button clicked");
+  };
+  const handleDelete = () => {
+    console.log("delete button clicked");
+  };
   return (
     <div className="mx-1">
       <div className="flex justify-end">
@@ -14,7 +20,7 @@ const Students = () => {
         </Link>
       </div>
 
-      <p className="text-5xl mt-2 text-gray-800 font-bold ml-5">
+      <p className="text-3xl mt-2 text-gray-800 font-bold ml-5">
         List of Student
       </p>
       <div className="flex mt-10  mb-3 text-table_header_color items-center justify-around font-semibold">
@@ -32,16 +38,16 @@ const Students = () => {
             index % 2 === 0 ? "bg-table_color_alternate" : "bg-white"
           }`}
         >
-          <p className="font-bold outline w-1/12">{Student.unique_ID}</p>
-          <p className="w-2/12 outline">{Student.name}</p>
-          <p className="w-2/12 ">
+          <p className="font-bold  w-1/12">{Student.unique_ID}</p>
+          <p className="w-2/12">{Student.name}</p>
+          <p className="w-2/12">
             <ul>
               <li> {Student.contact_details.phone}</li>
               <li> {Student.contact_details.email}</li>
               <li>{Student.contact_details.city}</li>
             </ul>
           </p>
-          <p className="w-3/12 outline">
+          <p className="w-3/12">
             <ul>
               {Student.academic_record.map((record) => (
                 <li key={record.subject}>
@@ -51,10 +57,16 @@ const Students = () => {
             </ul>
           </p>
           <p className="w-2/12 flex justify-between">
-            <button className="px-4 rounded-sm py-1 text-white bg-danger_yellow">
+            <button
+              onClick={() => handleUpdate()}
+              className="px-4 rounded-sm py-1 text-white bg-danger_yellow"
+            >
               Update
             </button>
-            <button className="px-4  rounded-sm py-1 text-white bg-danger_red">
+            <button
+              onClick={() => handleDelete()}
+              className="px-4  rounded-sm py-1 text-white bg-danger_red"
+            >
               Delete
             </button>
           </p>

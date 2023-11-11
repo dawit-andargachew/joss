@@ -5,9 +5,9 @@ import Courses from "./components/course/Courses";
 import Grades from "./components/Grades";
 import Analytics from "./components/analytics/Analytics";
 import NavBar from "./components/NavBar";
-import Students from "./components/Students";
 import AddCourseForm from "./components/course/AddCourse";
 import AddStudentForm from "./components/students/AddStudent";
+import Students from "./components/students/Students";
 
 const App = () => {
   return (
