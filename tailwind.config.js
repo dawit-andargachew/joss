@@ -11,6 +11,8 @@ module.exports = withMT({
       colors: {
         primary: "#009A6A",
         secondary: "#99E6CE",
+        danger_red: "#9A0000",
+        danger_yellow: "#DA930B",
         text_gray: "#6B7280",
         watch_video: "#374151",
         watch_video_outline: "#D1D5DB",

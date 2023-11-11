@@ -3,7 +3,7 @@ import BasicBars from "./BasicBars";
 
 const Analytics = () => {
   return (
-    <div className="mx-10 font-Inter py-3  ">
+    <div className="mx-10 font-Inter py-3">
       <p className="text-4xl text-gray-900 tracking-tight font-extrabold">
         Pass VS Fail
       </p>
