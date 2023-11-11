@@ -9,6 +9,7 @@ module.exports = withMT({
     extend: {
       colors: {
         primary: "#009A6A",
+        secondary: "#99E6CE",
         text_gray: "#6B7280",
         watch_video: "#374151",
         watch_video_outline: "#D1D5DB",

@@ -3,7 +3,7 @@ import HomePage from "./components/HomePage";
 import { Route, Routes } from "react-router-dom";
 import Courses from "./components/Courses";
 import Grades from "./components/Grades";
-import Analytics from "./components/Analytics";
+import Analytics from "./components/Analytics/Analytics";
 import NavBar from "./components/NavBar";
 import TandS from "./components/Teacher_and_Students";
 
